@@ -15,6 +15,7 @@ public class ArraysExercises {
         ex7();
         ex8();
         ex9();
+        ex10();
 
 
 
@@ -157,6 +158,10 @@ public class ArraysExercises {
         newArray[newArray.length - 1]= newElement;
         System.out.println(Arrays.toString(newArray));
 
+
+    }
+
+    static void ex10(){
 
     }
 
