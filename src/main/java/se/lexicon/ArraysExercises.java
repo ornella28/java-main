@@ -11,6 +11,10 @@ public class ArraysExercises {
         ex3();
         ex4();
         ex5();
+        ex6();
+        ex7();
+        ex8();
+        ex9();
 
 
 
@@ -78,7 +82,80 @@ public class ArraysExercises {
 
         }
 
+    }
 
+    static void ex6(){
+        int[] numbers = {43, 5, 23, 17, 2, 14};
+        //average = 17.3
+        double sum = 0;
+        for(int i=0; i<numbers.length; i++){
+            sum = sum + numbers[i];
+        }
+        double average = sum/numbers.length;
+        System.out.println("The average is " + average);
+
+
+    }
+
+    static void ex7(){
+        int [] numbers = {1,2,4,7,9,12,15,16,18,22};
+        for (int i=0; i<numbers.length; i++){
+            if (numbers[i]%2!=0){
+                System.out.println(numbers[i]);
+            }
+        }
+    }
+
+    static void ex8(){
+
+        int [] numbers = {20,20,40,20,30,40,50,60,50};
+        System.out.println("Array: ");
+
+        for (int i=0; i < numbers.length; i++){
+
+        }
+        System.out.println(Arrays.toString(numbers));
+
+        int[] uniqueNumbers = new int [10];//New array to store unique numbers
+
+        int uniqueCount = 0;//how many unique numbers we have added
+
+        for (int i=0; i<numbers.length; i++){//loop through each number in the original array
+            boolean alreadyExists = false;//
+
+            //checks if the number is already in the unique array
+            for (int j=0; j<uniqueCount; j++){
+                if(numbers[i]== uniqueNumbers[j]){
+                    alreadyExists = true;
+                    break;// found a duplicate, stops the loop
+                }
+
+            }
+            if (!alreadyExists){
+                uniqueNumbers[uniqueCount] = numbers[i];
+                uniqueCount++;
+            }
+
+        }
+        System.out.println("Array without duplicate: ");
+        for (int i = 0; i<uniqueCount; i++){
+
+        }
+        System.out.println(Arrays.toString(uniqueNumbers));
+
+    }
+
+    static void ex9(){
+        int [] originalArray = {8, 4, 7, 5};
+
+        int[] newArray = new int [originalArray.length+1];//creating a space for the new number
+        for (int i=0; i<originalArray.length; i++){
+            newArray[i] = originalArray[i];
+        }
+
+        int newElement = 14;
+        newArray[newArray.length - 1]= newElement;
+        System.out.println(Arrays.toString(newArray));
 
 
     }
